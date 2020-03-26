@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  category: MyString
+  year: 2020-03-26 00:40:43
+  trailer: MyString
+  cover: MyString
+  rating: 1
+  active: false
+  publish: 2020-03-26 00:40:43
+  schedule: MyString
+
+two:
+  title: MyString
+  description: MyText
+  category: MyString
+  year: 2020-03-26 00:40:43
+  trailer: MyString
+  cover: MyString
+  rating: 1
+  active: false
+  publish: 2020-03-26 00:40:43
+  schedule: MyString
