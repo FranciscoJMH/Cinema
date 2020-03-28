@@ -1,67 +1,39 @@
-<%= form_with(model: movie, local: true) do |form| %>
-  <% if movie.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
+<div class="container">
+  <div class="form-group">
+    <%= bootstrap_form_with(model: movie, local: true) do |form| %>
+      <% if movie.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
 
-      <ul>
-        <% movie.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+          <ul>
+            <% movie.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+        <%= form.text_field :title, label: 'Título' %>
+
+        <%= form.text_area :description, label: 'Descripción' %>
+
+        <%= form.text_field :category, label: 'Categoría' %>
+
+        <%= form.datetime_select :year, label: 'Año' %>
+
+        <%= form.text_field :trailer, label: 'Link del trailer' %>
+
+        <%= form.text_field :cover, label: 'Link de la portada' %>
+
+        <%= form.number_field :rating, label: 'Calificación' %>
+
+        <%= form.check_box :active, label: 'Mostrar' %>
+
+        <%= form.datetime_select :publish, label: 'Día de proyección' %>
+
+        <%= form.text_field :schedule, label: 'Horarios (Ejemplo: 4:00 P.M, 6:30 P.M)' %>
+
+        <%= form.submit "Guardar" %>
+    <% end %>
   </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :category %>
-    <%= form.text_field :category %>
-  </div>
-
-  <div class="field">
-    <%= form.label :year %>
-    <%= form.datetime_select :year %>
-  </div>
-
-  <div class="field">
-    <%= form.label :trailer %>
-    <%= form.text_field :trailer %>
-  </div>
-
-  <div class="field">
-    <%= form.label :cover %>
-    <%= form.text_field :cover %>
-  </div>
-
-  <div class="field">
-    <%= form.label :rating %>
-    <%= form.number_field :rating %>
-  </div>
-
-  <div class="field">
-    <%= form.label :active %>
-    <%= form.check_box :active %>
-  </div>
-
-  <div class="field">
-    <%= form.label :publish %>
-    <%= form.datetime_select :publish %>
-  </div>
-
-  <div class="field">
-    <%= form.label :schedule %>
-    <%= form.text_field :schedule %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
