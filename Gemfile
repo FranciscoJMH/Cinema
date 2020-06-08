@@ -21,6 +21,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 
 gem 'bootstrap', '~> 4.4.1'
+gem 'jquery-rails'
+
 gem "bootstrap_form", "~> 4.0"
 
 
