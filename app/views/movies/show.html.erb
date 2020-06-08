@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
-<div class="container">
+<div align="center">
+<img src=<%=@movie.cover %>>
+</div>
+  <div class="container">
 <p>
   <strong>Título:</strong>
   <%= @movie.title %>
@@ -48,8 +51,12 @@
 <p>
   <strong>Horarios:</strong>
   <%= @movie.schedule %>
-</p>
+</p>\
+    <iframe width="560" height="315" src=<%=@movie.trailer%>>
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 </div>
+    </div>
 <h4 align="center">
   <%= link_to 'Editar', edit_movie_path(@movie) %> |
   <%= link_to 'Atrás', movies_path %>
