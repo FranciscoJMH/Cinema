@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div class="container">
 <p>
   <strong>Title:</strong>
   <%= @movie.title %>
@@ -49,6 +49,8 @@
   <strong>Schedule:</strong>
   <%= @movie.schedule %>
 </p>
-
-<%= link_to 'Edit', edit_movie_path(@movie) %> |
-<%= link_to 'Back', movies_path %>
+</div>
+<h4 align="center">
+  <%= link_to 'Editar', edit_movie_path(@movie) %> |
+  <%= link_to 'Atrás', movies_path %>
+</h4>
