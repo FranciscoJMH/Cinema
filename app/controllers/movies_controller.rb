@@ -1,6 +1,7 @@
 class MoviesController < ApplicationController
+  skip_before_action :verify_authenticity_token
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
-  before_action :is_admin?, only: [:new, :edit, :update, :destroy]
+  before_action :is_admin?, only: [:new, :edit, :update, :destroy], if: Proc.new {|c| !c.request.format.json?}
 
   # GET /movies
   # GET /movies.json
