@@ -28,13 +28,13 @@
                 <% end %>
               </small>
               <h6>
-              <%= link_to 'Ver', movie %> |
               <% if user_signed_in? %>
                 <% if current_user.admin? %>
                   <%= link_to 'Editar', edit_movie_path(movie) %> |
-                  <%= link_to 'Elminar', movie, method: :delete, data: { confirm: '¿Estas seguro?' } %>
+                  <%= link_to 'Elminar', movie, method: :delete, data: { confirm: '¿Estas seguro?' } %> |
                 <% end %>
               <% end %>
+                <%= link_to 'Ver', movie %>
               </h6>
             </div>
           </div>
