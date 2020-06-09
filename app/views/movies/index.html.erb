@@ -45,7 +45,11 @@
 
     <br>
     <h4 align="center">
+      <% if user_signed_in? %>
+        <% if current_user.admin? %>
     <%= link_to 'Nueva Pelicula', new_movie_path %>
+        <% end %>
+        <%end %>
     </h4>
   </div>
 </div>
